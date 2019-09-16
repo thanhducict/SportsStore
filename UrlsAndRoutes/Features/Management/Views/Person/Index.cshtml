@@ -1,0 +1,22 @@
+﻿@model UrlsAndRoutes.Features.Management.Models.Person
+
+@{
+    Layout = null;
+}
+
+@* https://blogs.msdn.microsoft.com/gaurav/2014/01/14/the-view-must-derive-from-webviewpage-or-webviewpagetmodel-the-view-at-viewshomeindex-cshtml-must-derive-from-webviewpage-or-webviewpagetmodel/ *@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h5>@Model.Name</h5>
+        <h6>@Model.Age</h6>
+    </div>
+</body>
+</html>
