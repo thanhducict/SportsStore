@@ -32,6 +32,7 @@ namespace SportsStore.WebUI.Controllers
             return View(product);
         }
 
+        [ValidateInput(false)]
         [HttpPost]
         public ActionResult Edit(Product product, HttpPostedFileBase image = null)
         {
