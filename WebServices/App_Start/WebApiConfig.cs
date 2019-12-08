@@ -1,4 +1,6 @@
 ﻿using System.Web.Http;
+using System.Web.Http.Cors;
+using WebApiContrib.Formatting.Jsonp;
 
 namespace WebServices
 {
@@ -16,6 +18,14 @@ namespace WebServices
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            //EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
+            //config.EnableCors(cors);
+
+            config.EnableCors();
+
+            //var jsonpFormatter = new JsonpMediaTypeFormatter(config.Formatters.JsonFormatter);
+            //config.Formatters.Insert(0, jsonpFormatter);
         }
     }
 }

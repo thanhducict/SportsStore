@@ -7,17 +7,9 @@ namespace WebServices.Models
 {
     public class ReservationRepository
     {
-        private static ReservationRepository repo = new ReservationRepository();
+        public static ReservationRepository Current { get; } = new ReservationRepository();
 
-        public static ReservationRepository Current
-        {
-            get
-            {
-                return repo;
-            }
-        }
-
-        private List<Reservation> data = new List<Reservation> {
+        private readonly List<Reservation> data = new List<Reservation> {
             new Reservation { ReservationId = 1, ClientName = "Adam", Location = "Board Room" },
             new Reservation { ReservationId = 2, ClientName = "Jacqui", Location = "Lecture Hall" },
             new Reservation { ReservationId = 3, ClientName = "Russell", Location = "Meeting Room 1" },

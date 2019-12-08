@@ -1,38 +1,41 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using WebServices.Models;
 
 namespace WebServices.Controllers
 {
+    [EnableCors(origins: "http://localhost:52574", headers: "*", methods: "*")]
     public class WebController : ApiController
     {
-        private ReservationRepository repo = ReservationRepository.Current;
+        private readonly ReservationRepository _repo = ReservationRepository.Current;
 
+        //[DisableCors]
         public IEnumerable<Reservation> GetAllReservations()
         {
-            return repo.GetAll();
+            return _repo.GetAll();
         }
 
         public Reservation GetReservation(int id)
         {
-            return repo.Get(id);
+            return _repo.Get(id);
         }
 
         [HttpPost]
         public Reservation CreateReservation(Reservation item)
         {
-            return repo.Add(item);
+            return _repo.Add(item);
         }
 
         [HttpPut]
         public bool UpdateReservation(Reservation item)
         {
-            return repo.Update(item);
+            return _repo.Update(item);
         }
 
         public void DeleteReservation(int id)
         {
-            repo.Remove(id);
+            _repo.Remove(id);
         }
     }
 }
