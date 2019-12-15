@@ -35,7 +35,7 @@ namespace MvcModels.Controllers
         {
             return View(summary);
         }
-        
+
         public ActionResult Names(IList<string> names)
         {
             names = names ?? new string[0];

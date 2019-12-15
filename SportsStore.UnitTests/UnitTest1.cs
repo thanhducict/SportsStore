@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using SportsStore.Domain.Abstract;
 using SportsStore.Domain.Entities;
 using SportsStore.WebUI.Controllers;
 using SportsStore.WebUI.HtmlHelpers;
 using SportsStore.WebUI.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace SportsStore.UnitTests
 {
@@ -35,7 +35,7 @@ namespace SportsStore.UnitTests
             // Act
             ProductsListViewModel result =
             (ProductsListViewModel)controller.List(null, 2).Model;
-            
+
             // Assert
             Product[] prodArray = result.Products.ToArray();
             Assert.IsTrue(prodArray.Length == 2);

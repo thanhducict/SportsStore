@@ -52,7 +52,8 @@ namespace HelperMethods.Controllers
             }
             if (Request.IsAjaxRequest())
             {
-                var formattedData = data.Select(p => new {
+                var formattedData = data.Select(p => new
+                {
                     FirstName = p.FirstName,
                     LastName = p.LastName,
                     Role = Enum.GetName(typeof(Role), p.Role)

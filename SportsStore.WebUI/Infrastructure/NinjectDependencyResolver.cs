@@ -4,6 +4,7 @@ using SportsStore.Domain.Abstract;
 using SportsStore.Domain.Concrete;
 using SportsStore.WebUI.Infrastructure.Abstract;
 using SportsStore.WebUI.Infrastructure.Concrete;
+using SportsStore.WebUI.Service;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -54,6 +55,7 @@ namespace SportsStore.WebUI.Infrastructure
                 .WithConstructorArgument("settings", emailSettings);
 
             kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
+            kernel.Bind<ICookieService>().To<CookieService>();
         }
     }
 }

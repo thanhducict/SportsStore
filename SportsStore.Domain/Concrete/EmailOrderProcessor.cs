@@ -37,7 +37,7 @@ namespace SportsStore.Domain.Concrete
                 smtpClient.Port = emailSettings.ServerPort;
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = new NetworkCredential(emailSettings.Username, emailSettings.Password);
-                
+
                 // Already set WriteAsFile value in Web.config
                 if (emailSettings.WriteAsFile)
                 {

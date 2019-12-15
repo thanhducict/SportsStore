@@ -1,7 +1,5 @@
 ﻿using System.Web.Mvc;
-using System.Web.Mvc.Routing.Constraints;
 using System.Web.Routing;
-using UrlsAndRoutes.Infrastructure;
 
 namespace UrlsAndRoutes
 {
@@ -15,16 +13,16 @@ namespace UrlsAndRoutes
 
             routes.MapMvcAttributeRoutes();
 
-            routes.MapRoute("MyRoute", "{controller}/{action}", null, 
+            routes.MapRoute("MyRoute", "{controller}/{action}", null,
                 new[] { "UrlsAndRoutes.Controllers" });
             routes.MapRoute("MyOtherRoute", "App/{action}", new { controller = "Home" },
                 new[] { "UrlsAndRoutes.Controllers" });
 
             routes.MapRoute(
-                name: "Default", 
-                url: "{controller}/{action}/{id}", 
+                name: "Default",
+                url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                namespaces: new[] { "UrlsAndRoutes.Controllers" } );
+                namespaces: new[] { "UrlsAndRoutes.Controllers" });
 
             #endregion
 

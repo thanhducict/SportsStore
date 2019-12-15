@@ -1,8 +1,8 @@
-﻿using System.Linq;
+﻿using SportsStore.Domain.Abstract;
+using SportsStore.Domain.Entities;
+using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SportsStore.Domain.Abstract;
-using SportsStore.Domain.Entities;
 
 namespace SportsStore.WebUI.Controllers
 {

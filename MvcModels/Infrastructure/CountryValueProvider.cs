@@ -13,7 +13,7 @@ namespace MvcModels.Infrastructure
         public ValueProviderResult GetValue(string key)
         {
             if (ContainsPrefix(key))
-            {                
+            {
                 return new ValueProviderResult("USA", "USA", CultureInfo.InvariantCulture);
             }
             else

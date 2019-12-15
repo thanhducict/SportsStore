@@ -1,5 +1,5 @@
-﻿using System.Web.Mvc;
-using SportsStore.Domain.Entities;
+﻿using SportsStore.Domain.Entities;
+using System.Web.Mvc;
 
 namespace SportsStore.WebUI.Infrastructure.Binders
 {

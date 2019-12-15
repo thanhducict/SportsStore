@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using System.Web.Security;
 
 namespace Filters.Controllers
@@ -11,6 +12,7 @@ namespace Filters.Controllers
         }
 
         [HttpPost]
+        [Obsolete]
         public ActionResult Login(string username, string password, string returnUrl)
         {
             bool result = FormsAuthentication.Authenticate(username, password);
