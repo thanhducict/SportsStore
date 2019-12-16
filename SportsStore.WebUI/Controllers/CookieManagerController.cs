@@ -15,9 +15,24 @@ namespace SportsStore.WebUI.Controllers
 
         public ActionResult Index()
         {
-            //_cookieService.StoreInCookie("BabyCookie", "http://localhost:52574/", "BabyKey", "Oa oa oa", new DateTime(2019, 12, 20));
-            _cookieService.CreateCookie("Kazootie", "Valuable", new DateTime(2019, 12, 20));
             return View();
+        }
+
+        [HttpPost]
+        public string CreateCookie()
+        {
+            return _cookieService.CreateCookie("Cookie demo", "Cookie value", new DateTime(2019, 12, 20));
+        }
+
+        public string GetCookie()
+        {
+            return _cookieService.GetCookie("Cookie demo");
+        }
+
+        [HttpPost]
+        public string DeleteCookie()
+        {
+            return _cookieService.DeleteCookie("Cookie demo");
         }
     }
 }

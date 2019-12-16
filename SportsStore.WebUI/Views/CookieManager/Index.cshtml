@@ -1,18 +1,42 @@
 ﻿@{
     ViewBag.Title = "Cookie Manager";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <h2>Cookie Manager</h2>
 
+<button id="createCookie">Set Cookie</button>
+<button id="getCookie">Get Cookie</button>
+<button id="deleteCookie">Delete Cookie</button>
 <script>
-    var opts = {
-        method: 'GET',
-        headers: {}
-    };
-    fetch('/CookieManager/Index', opts).then(function (response) {
-        return response.json();
+    $("#createCookie").click(() => {
+        $.ajax({
+            type: "post",
+            url: "/cookiemanager/createCookie",
+            success: (response) => {
+                console.log(response)
+            }
+        })
     })
-    .then(function (body) {
-      //doSomething with body;
-    });
+
+    $("#getCookie").click(() => {
+        $.ajax({
+            type: "get",
+            url: "/cookiemanager/getCookie",
+            success: (response) => {
+                console.log(response)
+            }
+        })
+    })
+
+    $("#deleteCookie").click(() => {
+        $.ajax({
+            type: "post",
+            url: "/cookiemanager/deleteCookie",
+            success: (response) => {
+                console.log(response)
+            }
+        })
+    })
+
 </script>
