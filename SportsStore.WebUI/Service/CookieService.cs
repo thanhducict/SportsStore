@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Web;
-using System.Web.Mvc;
 
 namespace SportsStore.WebUI.Service
 {
@@ -8,8 +7,16 @@ namespace SportsStore.WebUI.Service
     {
         public string CreateCookie(string cookieName, string cookieValue, DateTime datetime)
         {
-            HttpContext.Current.Response.Cookies[cookieName].Value = cookieValue;
-            HttpContext.Current.Response.Cookies[cookieName].Expires = datetime;
+            //HttpContext.Current.Response.Cookies[cookieName].Value = cookieValue;
+            //HttpContext.Current.Response.Cookies[cookieName].Expires = datetime;
+
+            HttpCookie strname = new HttpCookie(cookieName)
+            {
+                Value = cookieValue,
+                Expires = datetime
+            };
+            HttpContext.Current.Response.Cookies.Add(strname);
+
             return "Cookie created";
         }
 

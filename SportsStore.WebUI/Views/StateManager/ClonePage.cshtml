@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Clone Page";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Clone page</h1>
+<p>Another page for testing Asp.Net website state</p>
+
+<h3>Cookie Manager</h3>
+
+<button id="createCookie">Set Cookie</button>
+<button id="getCookie">Get Cookie</button>
+<button id="deleteCookie">Delete Cookie</button>
+
+<h3>Session Manager</h3>
+<button id="createSession">Set Session</button>
+<button id="getSession">Get Session</button>
+<button id="deleteSession">Delete Session</button>
+
+<script>
+    $("#createCookie").click(() => {
+        $.ajax({
+            type: "post",
+            url: "/StateManager/CreateCookie",
+            success: (response) => {
+                console.log(response)
+            }
+        });
+    });
+
+    $("#getCookie").click(() => {
+        $.ajax({
+            type: "get",
+            url: "/StateManager/GetCookie",
+            success: (response) => {
+                console.log(response)
+            }
+        });
+    });
+
+    $("#deleteCookie").click(() => {
+        $.ajax({
+            type: "post",
+            url: "/StateManager/DeleteCookie",
+            success: (response) => {
+                console.log(response)
+            }
+        });
+    });
+
+    $("#createSession").click(() => {
+        $.ajax({
+            type: "post",
+            url: "/StateManager/createSession",
+            success: (response) => {
+                console.log(response)
+            }
+        });
+    });
+
+    $("#getSession").click(() => {
+        $.ajax({
+            type: "get",
+            url: "/StateManager/GetSession",
+            success: (response) => {
+                console.log(response)
+            }
+        });
+    });
+
+    $("#deleteSession").click(() => {
+        $.ajax({
+            type: "post",
+            url: "/StateManager/DeleteSession",
+            success: (response) => {
+                console.log(response)
+            }
+        });
+    });
+
+</script>
