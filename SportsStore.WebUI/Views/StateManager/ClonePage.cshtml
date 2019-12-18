@@ -17,6 +17,10 @@
 <button id="getSession">Get Session</button>
 <button id="deleteSession">Delete Session</button>
 
+<h3>Application State Manager</h3>
+<button id="createApplicationState">Set Application State</button>
+<button id="getApplicationState">Get Application State</button>
+
 <script>
     $("#createCookie").click(() => {
         $.ajax({
@@ -72,6 +76,26 @@
         $.ajax({
             type: "post",
             url: "/StateManager/DeleteSession",
+            success: (response) => {
+                console.log(response)
+            }
+        });
+    });
+
+    $("#createApplicationState").click(() => {
+        $.ajax({
+            type: "post",
+            url: "/StateManager/createApplicationState",
+            success: (response) => {
+                console.log(response)
+            }
+        });
+    });
+
+    $("#getApplicationState").click(() => {
+        $.ajax({
+            type: "get",
+            url: "/StateManager/GetApplicationState",
             success: (response) => {
                 console.log(response)
             }

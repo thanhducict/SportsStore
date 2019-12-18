@@ -57,6 +57,7 @@ namespace SportsStore.WebUI.Infrastructure
             kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
             kernel.Bind<ICookieService>().To<CookieService>();
             kernel.Bind<ISessionService>().To<SessionService>();
+            kernel.Bind<IApplicationStateService>().To<ApplicationStateService>();
         }
     }
 }

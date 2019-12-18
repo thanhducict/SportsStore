@@ -8,11 +8,15 @@ namespace SportsStore.WebUI.Controllers
     {
         private readonly ICookieService _cookieService;
         private readonly ISessionService _sessionService;
+        private readonly IApplicationStateService _applicationStateService;
 
-        public StateManagerController(ICookieService cookieService, ISessionService sessionService)
+        public StateManagerController(ICookieService cookieService,
+            ISessionService sessionService,
+            IApplicationStateService applicationStateService)
         {
             _cookieService = cookieService;
             _sessionService = sessionService;
+            _applicationStateService = applicationStateService;
         }
 
         public ActionResult Index()
@@ -57,6 +61,17 @@ namespace SportsStore.WebUI.Controllers
         public string DeleteSession()
         {
             return _sessionService.DeleteSession("Session demo");
+        }
+
+        [HttpPost]
+        public string CreateApplicationState()
+        {
+            return _applicationStateService.CreateApplicationState("Application state demo", "Application state value");
+        }
+
+        public string GetApplicationState()
+        {
+            return _applicationStateService.GetApplicationState("Application state demo");
         }
     }
 }

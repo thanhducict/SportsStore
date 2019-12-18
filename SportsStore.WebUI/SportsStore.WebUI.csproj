@@ -173,7 +173,9 @@
     <Compile Include="Models\PagingInfo.cs" />
     <Compile Include="Models\ProductsListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ApplicationStateService.cs" />
     <Compile Include="Service\CookieService.cs" />
+    <Compile Include="Service\IApplicationStateService.cs" />
     <Compile Include="Service\ICookieService.cs" />
     <Compile Include="Service\ISessionService.cs" />
     <Compile Include="Service\SessionService.cs" />

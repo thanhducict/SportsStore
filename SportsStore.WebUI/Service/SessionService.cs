@@ -19,7 +19,8 @@ namespace SportsStore.WebUI.Service
 
         public string DeleteSession(string sessionName)
         {
-            HttpContext.Current.Session.Abandon();
+            //HttpContext.Current.Session.Abandon();
+            HttpContext.Current.Session.Clear();
 
             return "Session deleted";
         }
