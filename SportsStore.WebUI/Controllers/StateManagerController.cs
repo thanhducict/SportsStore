@@ -73,5 +73,10 @@ namespace SportsStore.WebUI.Controllers
         {
             return _applicationStateService.GetApplicationState("Application state demo");
         }
+
+        public string TestQueryString()
+        {
+            return $"Value 1: {Request.QueryString["value1"]} - value 2: {Request.QueryString["value2"]}";
+        }
     }
 }

@@ -20,6 +20,20 @@
 <button id="createApplicationState">Set Application State</button>
 <button id="getApplicationState">Get Application State</button>
 
+<h3>Query String Manager</h3>
+@using (Html.BeginForm("TestQueryString", "StateManager", FormMethod.Get))
+{
+    @Html.Label("Value1")
+    <br />
+    @Html.TextBox("Value1")
+    <br />
+    @Html.Label("Value2")
+    <br />
+    @Html.TextBox("Value2")
+    <br />
+    <input type="submit" value="Submit" />
+}
+
 <script>
     $("#createCookie").click(() => {
         $.ajax({
