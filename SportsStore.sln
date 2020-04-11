@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices", "WebServices\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{A0A36FA8-E36B-45E1-94B0-2C47B6380273}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithRazor", "WorkingWithRazor\WorkingWithRazor.csproj", "{9A2B4305-C097-4D4D-864B-F63CA4D05434}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{A0A36FA8-E36B-45E1-94B0-2C47B6380273}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0A36FA8-E36B-45E1-94B0-2C47B6380273}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0A36FA8-E36B-45E1-94B0-2C47B6380273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A2B4305-C097-4D4D-864B-F63CA4D05434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A2B4305-C097-4D4D-864B-F63CA4D05434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A2B4305-C097-4D4D-864B-F63CA4D05434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A2B4305-C097-4D4D-864B-F63CA4D05434}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
